@@ -9,11 +9,11 @@ To get started, check out the repository and inspect the code.
 
 #### Part 1: Optimize PageSpeed Insights score for index.html
 
-Website Location:
+Website Location: https://ag005b.github.io/
 
 PageSpeed Insights Scores:
-1- Desktop:
-2- Mobile:
+1- Desktop: 96
+2- Mobile: 95
 
 Changes Made to Attain these Scores:
 Index.html
@@ -41,7 +41,7 @@ Index.html
 
 #### Part 2: Optimize Frames per Second in pizza.html
 
-Website Location:
+Website Location: https://ag005b.github.io/views/pizza.html
 
 Changes Made:
 pizza.html
