@@ -517,9 +517,9 @@ function updatePositions() {
     phases.push(phase);
   }
 
-  for (var i = 0; i < items.length; i++) {
-    phase = phases[i % 5];
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+  for (var j = 0; j < items.length; j++) {
+    phase = phases[j % 5];
+    items[j].style.left = items[j].basicLeft + 100 * phase + 'px';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
