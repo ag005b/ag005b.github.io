@@ -57,3 +57,20 @@ main.js
      To use document.getElementsByClassName('mover') is more efficient accessing the DOM instead of instead of querySelectorAll(.'mover')
      Moved all code reading layout property 'scrollTop'  outside of the loop and batch update the styling afterwards
      Reduced the number of pizza images appended to 25
+
+     
+#### Resubmission
+ Updates to:
+ 
+ images:
+  - Update and renamed the compressed pizzeria jpg to be used on index.html and optimized/compressed pizzeria jpg for the pizza.html page
+  
+ Index.htmml
+  - Update src attribute with the pizzeria jpeg with the required compressed dimensions
+  
+ main.js
+  - Update conditional statement in function changePizzaSizes() to make length a localized variable rather than accessing the array 
+    property each iteration
+  - Declare the elem variable in the initialisation of the for-loop
+  - Move DOM call for movingPizzas1 outside the for loop
+  - Use the height property to dynamically calculate number of pizzas to fill screen

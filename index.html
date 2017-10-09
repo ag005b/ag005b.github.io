@@ -49,7 +49,7 @@
           </li>
 
           <li>
-            <img style="width: 100px;" src="views/images/pizzeria.jpg"> <!-- compressed image file to save total bytes-->
+            <img style="width: 100px;" src="views/images/pizzeria-100.jpg"> <!-- compressed image file to save total bytes-->
             <a href="views/pizza.html">Akim's Pizzeria</a>
             <p>Who wants a performant pizza?</p>
           </li>
@@ -60,25 +60,26 @@
         <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
       </footer>
     </div>
-  </body>
-  <!-- moved script tags from head tag; placed them after body tag therefore would not block DOM construction -->
-  <!-- added async attribute to non manipulating js -->
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['Open Sans']
-      }
-    });
-  </script>
-  <script async>
-    (function(w,g){w['GoogleAnalyticsObject']=g;
-    w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
+	<!-- moved script tags from head tag; placed them after body tag therefore would not block DOM construction -->
+    <!-- added async attribute to non manipulating js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script></script>
+    <script>
+	  WebFont.load({
+    	  google: {
+    	  families: ['Open Sans']
+          }
+      });
+     </script>
+     <script async>
+	   (function(w,g){w['GoogleAnalyticsObject']=g;
+        w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
 
-    // Optional TODO: replace with your Google Analytics profile ID.
-    ga('create', 'UA-XXXX-Y');
-    ga('send', 'pageview');
-  </script>
-  <script async src="http://www.google-analytics.com/analytics.js"></script>
-  <script async src="js/perfmatters.js"></script>
+        // Optional TODO: replace with your Google Analytics profile ID.
+        ga('create', 'UA-XXXX-Y');
+        ga('send', 'pageview');
+     </script>
+     <script async src="http://www.google-analytics.com/analytics.js"></script>
+     <script async src="js/perfmatters.js"></script>
+  </body>
+
 </html>

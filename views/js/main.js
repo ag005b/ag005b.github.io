@@ -455,8 +455,8 @@ var resizePizzas = function(size) {
 	  var dx = determineDx(randomPizzas[0], size);
 	  var newwidth = (randomPizzas[0].offsetWidth);
 	  var recalculatedWidth = (dx + newwidth) + 'px';
-
-	  for (var i = 0; i < randomPizzas.length; i++) {
+	  // re-wrote conditional statement to make length a localized variable rather than accessing the array property each iteration	
+	  for (var i = 0, len = randomPizzas.length; i < len; i++) {
 		  randomPizzas[i].style.width = recalculatedWidth;
 	}
   }
@@ -539,16 +539,18 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+  var NumberOfPizzas = (window.screen.availHeight / 2) * cols; //using the height property to dynamically calculate number of pizzas to fill screen
+  var movingPizzas = document.getElementById('movingPizzas1');
   // Reduced the number of pizza images appended to 25
-  for (var i = 0; i < 25; i++) {
-    var elem = document.createElement('img');
+  for (var i = 0, elem; i < NumberOfPizzas; i++) {
+    elem = document.createElement('img'); //Declared the elem variable in the initialisation of the for-loop 
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.getElementById("movingPizzas1").appendChild(elem);
+    movingPizzas1.appendChild(elem);
   }
   updatePositions();
 });
